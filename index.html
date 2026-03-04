@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Story | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f9f7f1;
+    color:#2b1e16;
+    line-height:1.7;
+    scroll-behavior:smooth;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0 10%;
+    background:#fffdf8;
+    border-bottom:2px solid #e0d7c5;
+}
+
+.hero-content{
+    display:flex;
+    align-items:center;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.hero-text h1{
+    font-size:4rem;
+    font-weight:800;
+    margin-bottom:20px;
+    border-left:4px solid #c65a2e;
+    padding-left:15px;
+}
+
+.hero-text p{
+    font-size:1.2rem;
+    max-width:500px;
+}
+
+.hero-photo img{
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    object-fit:cover;
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+    transition:0.5s ease;
+}
+
+.hero-photo img:hover{
+    transform:scale(1.05);
+}
+
+/* SECTIONS */
+.section{
+    padding:80px 10%;
+    border-bottom:1px solid #e0d7c5;
+}
+
+.section:nth-of-type(even){
+    background:#fdf8f2;
+}
+
+.section h2{
+    font-size:2.7rem;
+    margin-bottom:60px;
+    text-align:center;
+    font-family:'Poppins', sans-serif;
+    letter-spacing:1px;
+    border-bottom:2px solid #c65a2e;
+    display:inline-block;
+    padding-bottom:10px;
+}
+
+/* STORY BLOCK */
+.story-block{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:40px;
+    align-items:center;
+    margin-bottom:60px;
+    padding:20px;
+    background:#fffdf8;
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+    border-left:4px solid #c65a2e;
+    opacity:0;
+    transform:translateY(60px);
+    transition:all 1s ease;
+}
+
+.story-block.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Zigzag effect */
+.story-block:nth-child(even){
+    grid-template-columns:2fr 1fr;
+}
+
+/* Image */
+.story-block img{
+    width:100%;
+    border-radius:15px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.story-block img:hover{
+    transform:scale(1.05);
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Text */
+.story-block p{
+    font-size:1.15rem;
+    line-height:1.8;
+    padding-right:10px;
+}
+
+/* Alternate Section for Dressing Up and Dreams */
+.alt{
+    background:#c65a2e;
+    color:#fff;
+}
+
+.alt .story-block{
+    background:#a64c27;
+    border-left:4px solid #fff;
+}
+
+.alt .story-block p{
+    color:#fff;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:50px;
+    background:#2b1e16;
+    color:#fff;
+    letter-spacing:1px;
+    font-size:0.95rem;
+}
+
+/* Responsive */
+@media(max-width:900px){
+    .hero-content{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-text h1{
+        font-size:2.5rem;
+        border-left:none;
+        padding-left:0;
+    }
+
+    .hero-photo img{
+        width:220px;
+        height:220px;
+    }
+
+    .story-block{
+        grid-template-columns:1fr;
+    }
+
+    .story-block:nth-child(even){
+        grid-template-columns:1fr;
+    }
+
+    .story-block p{
+        padding-right:0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>About Me</h1>
+            <p>
+                Hi! I’m Charlize. I love creativity, dressing up, cooking, and dreaming big.
+                Welcome to my personal journey and story.
+            </p>
+        </div>
+        <div class="hero-photo">
+            <img src="me.jpg" alt="My photo">
+        </div>
+    </div>
+</section>
+
+<!-- CHILDHOOD -->
+<section class="section">
+<h2>My Childhood</h2>
+
+<div class="story-block">
+    <img src="5264.jpg" alt="Childhood photo 1">
+    <p>
+        As a child, I loved playing and exploring. My mom always supported me and bought me the things that made me happy.
+        Those simple moments shaped my creativity and confidence.
+    </p>
+</div>
+
+<div class="story-block">
+    <img src="smol.jpg" alt="Childhood photo 2">
+    <p>
+        I started my elementary education at Mountain View College Elementary School, which helped me build my academic foundation.
+        Later, I transferred to LLAES, another private institution that continued to shape my learning experience.
+        Growing up in Christian schools deeply influenced my values, discipline, and faith.
+    </p>
+</div>
+</section>
+
+<!-- DRESSING UP -->
+<section class="section alt">
+<h2>Dressing Up & Imagination</h2>
+
+<div class="story-block">
+    <img src="educ.jpg" alt="Dressing Up photo 1">
+    <p>
+        Dressing up and playing with my Barbie dolls sparked my imagination.
+        I loved creating stories and pretending to be different characters.
+    </p>
+</div>
+
+<div class="story-block">
+    <img src="dres.jpg" alt="Dressing Up photo 2">
+    <p>
+        Through dressing up, I developed creativity, confidence, and the belief
+        that I could become anything I wanted.
+    </p>
+</div>
+
+<div class="story-block">
+    <img src="dres1.jpg" alt="Dressing Up photo 3">
+    <p>
+        Imagining different roles and scenarios shaped my ability to dream big
+        and see possibilities beyond my surroundings.
+    </p>
+</div>
+</section>
+
+<!-- COOKING -->
+<section class="section">
+<h2>Love for Cooking</h2>
+
+<div class="story-block">
+    <img src="cook1.jpg" alt="Cooking photo 1">
+    <p>
+        Watching my mom and my tita cook inspired my love for cooking.
+        In our family, food represents unity, tradition, and love.
+        Cooking became my way of expressing care and connection.
+    </p>
+</div>
+
+<div class="story-block">
+    <img src="cook.jpg" alt="Cooking photo 2">
+    <p>
+        Because of my mom and tita, I learned that cooking is not just a skill —
+        it is an art and a tradition passed down in our family.
+        Seeing them prepare meals with care and passion made me want to learn and improve.
+        Now, whenever I cook, I feel connected to them and to our family traditions.
+    </p>
+</div>
+</section>
+
+<!-- DREAMS & ASPIRATIONS -->
+<section class="section alt">
+<h2>Dreams & Aspirations</h2>
+
+<div class="story-block">
+    <img src="read.jpg" alt="Reading photo">
+    <p>
+        I enjoy reading books, especially those that teach real-life lessons and facts.
+        Academics are important to me because I want to make my mom proud.
+        She inspires me every day — she is smart, professional, and hardworking.
+        I look up to her and hope to become like her someday.
+    </p>
+</div>
+
+<div class="story-block">
+    <img src="doc.jpg" alt="Doctor dream">
+    <p>
+        Ever since I was young, I dreamed of becoming a doctor.
+        I want to help people, heal them, and make a difference in their lives.
+        I know the journey will not be easy, but I am determined to work hard and give my best to achieve this dream.
+        I believe that with faith, perseverance, and dedication, I can make it happen.
+        I am flexible, kind, smart, and loving.
+        I value friendship and have made many meaningful connections throughout my journey.
+        I believe that life is not just about achievements,
+        but also about the relationships we build and the love we share.
+    </p>
+</div>
+</section>
+
+<footer>
+© 2026 My Personal Story | All Rights Reserved
+</footer>
+
+<script>
+const blocks = document.querySelectorAll('.story-block');
+const headings = document.querySelectorAll('.section h2');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{ threshold:0.3 });
+
+blocks.forEach(block => observer.observe(block));
+headings.forEach(h2 => observer.observe(h2));
+</script>
+
+</body>
+</html>
